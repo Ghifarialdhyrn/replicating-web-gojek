@@ -1,0 +1,59 @@
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: auto;
+}
+
+nav {
+  position: fixed; /* Mengganti sticky menjadi fixed */
+  width: 100%; /* Pastikan navbar mencakup seluruh lebar */
+  height: 90px;
+  background-color: #101820;
+  display: flex;
+  padding: 5px 10px;
+  top: 0;
+  justify-content: space-between;
+  z-index: 1; /* Pastikan selalu di atas */
+}
+
+img {
+  max-width: 110px;
+  height: auto;
+  margin-left: 40px;
+  margin-top: 30px;
+}
+
+a[href] {
+  color: white;
+  text-decoration: none;
+}
+
+span {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 50px;
+  font-size: 17px;
+  font-weight: 600;
+  margin-right: 40px;
+  font-family: "Maison Neue Demi";
+}
+
+.hero {
+  position: absolute;
+  margin-top: 90px;
+  width: 100%;
+  height: 100vh;
+  background: url(https://cdn-site.gojek.com/uploads/hero_b18c33ed07.jpg);
+  background-repeat: no-repeat;
+  background-size: cover; /* Sesuaikan agar gambar penuh */
+  color: white;
+  font-size: 31.5px;
+}
+
+.hero h1 {
+  margin-top: 385px;
+  margin-left: 170px;
+  font-family: "Maison Neue Extended Extra Bold";
+}
