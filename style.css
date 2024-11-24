@@ -5,16 +5,21 @@ body {
   overflow: auto;
 }
 
+header {
+  width: 100%;
+  height: auto;
+}
+
 nav {
-  position: fixed; /* Mengganti sticky menjadi fixed */
-  width: 100%; /* Pastikan navbar mencakup seluruh lebar */
+  position: fixed;
+  width: 100%;
   height: 90px;
   background-color: #101820;
   display: flex;
   padding: 5px 10px;
   top: 0;
   justify-content: space-between;
-  z-index: 1; /* Pastikan selalu di atas */
+  z-index: 1;
 }
 
 img {
@@ -29,6 +34,12 @@ a[href] {
   text-decoration: none;
 }
 
+a[href]:hover {
+  text-decoration: underline;
+  cursor: pointer;
+  color: white;
+}
+
 span {
   display: flex;
   flex-direction: row;
@@ -40,9 +51,13 @@ span {
   font-family: "Maison Neue Demi";
 }
 
+.container {
+  position: block;
+  unicode-bidi: isolate;
+}
+
 .hero {
-  position: absolute;
-  margin-top: 90px;
+  position: relative;
   width: 100%;
   height: 100vh;
   background: url(https://cdn-site.gojek.com/uploads/hero_b18c33ed07.jpg);
@@ -53,7 +68,273 @@ span {
 }
 
 .hero h1 {
+  position: absolute;
   margin-top: 385px;
   margin-left: 170px;
   font-family: "Maison Neue Extended Extra Bold";
+}
+
+.content {
+  padding-top: 40px;
+  padding-bottom: 20px;
+  opacity: 1;
+  background-color: rgba(16, 24, 32, 1);
+  scroll-margin: 40px;
+  width: 100%;
+  margin: auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.content h1 {
+  color: white;
+  letter-spacing: 0;
+  font-weight: 700;
+  font-size: 48px;
+  margin-bottom: 12px;
+  font-family: "Maison Neue Extended Extra Bold";
+}
+
+.content a {
+  color: white;
+  line-height: 24px;
+  font-size: 16px;
+  text-align: center;
+  background-color: rgba(0, 136, 13, 1);
+  border-radius: 96px;
+  justify-content: center;
+  align-items: center;
+  width: 120px;
+  height: 44px;
+  display: inline-flex;
+  text-decoration: inherit;
+  font-family: "Maison Neue Demi";
+}
+
+.content a span {
+  margin-left: 40px;
+}
+
+.back {
+  position: absolute;
+  background-color: rgba(16, 24, 32, 1);
+  align-items: flex-end;
+  width: 100%;
+  height: 166px;
+  display: flex;
+  top: 0;
+}
+
+.back-down {
+  background-color: rgba(255, 255, 255, 1);
+  border-top-left-radius: 90px;
+  border-top-right-radius: 90px;
+  width: 100%;
+  height: 100px;
+}
+
+.swiper {
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  overflow: hidden;
+  list-style: none;
+  padding: 0;
+  z-index: 0;
+  display: block;
+  width: 80%;
+  height: auto;
+  margin: auto;
+  max-width: 1600px;
+}
+
+.swiper-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  bottom: 20px;
+  transition-property: transform;
+  box-sizing: content-box;
+  transform: translate3d(0px, 0px, 0px);
+  gap: 50px;
+}
+
+.swiper-slide {
+  width: 250px;
+  margin-right: 30px;
+  transform: translateZ(0);
+  flex-shrink: 0;
+  height: auto;
+  position: relative;
+  transition-property: transform;
+  display: block;
+  padding-bottom: 48px;
+}
+
+.card {
+  text-align: center;
+  padding-left: 20px;
+  padding-right: 20px;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  display: flex;
+  width: 100%;
+}
+
+.image1 {
+  width: 140px;
+  position: relative;
+  background-color: transparent;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+
+.image1 img {
+  width: 150px;
+  max-width: 200px;
+  margin-right: 30px;
+  transform: translate3d(0px, 0px, 0px);
+  content-visibility: visible;
+  display: block;
+  vertical-align: middle;
+  animation-name: kenalin;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes kenalin {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.1);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+.card h3 {
+  font-family: "Maison Neue Bold";
+  line-height: 27px;
+  font-size: 23px;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  margin-top: 24px;
+  margin-bottom: 4px;
+  font-weight: 900;
+  text-align: center;
+}
+
+.card p {
+  font-family: "Maison Neue Book";
+  line-height: 21px;
+  font-size: 16px;
+}
+
+.skala {
+  padding-top: 40px;
+  padding-bottom: 20px;
+  opacity: 1;
+  background-color: rgba(255, 255, 255, 1);
+  scroll-margin: 40px;
+  width: 100%;
+  margin: auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.skala h1 {
+  color: black;
+  letter-spacing: 0;
+  font-weight: 700;
+  font-size: 48px;
+  margin-bottom: 12px;
+  font-family: "Maison Neue Extended Extra Bold";
+}
+
+.skala a {
+  color: white;
+  line-height: 24px;
+  font-size: 16px;
+  text-align: center;
+  background-color: rgba(0, 136, 13, 1);
+  border-radius: 96px;
+  justify-content: center;
+  align-items: center;
+  width: 120px;
+  height: 44px;
+  display: inline-flex;
+  text-decoration: inherit;
+  font-family: "Maison Neue Demi";
+}
+
+.skala a span {
+  margin-left: 40px;
+}
+
+.scale {
+  padding-top: 80px;
+  padding-bottom: 80px;
+  background-color: rgba(255, 255, 255, 1);
+}
+
+.scale-wrapper {
+  width: 80%;
+  margin: auto;
+  gap: 40px;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  display: grid;
+}
+
+.scale-card {
+  width: 100%;
+  height: auto;
+  border-radius: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.scale-card img {
+  transform: translateY(-110px);
+  height: auto;
+  width: 100%;
+  border-style: none;
+  max-width: 100%;
+  margin-right: 40px;
+  margin-bottom: -60px;
+}
+
+.text-scale {
+  text-align: left;
+  padding-top: 0;
+}
+
+.text-scale h3 {
+  font-family: "Maison Neue Extended Extra Bold";
+  font-size: 36px;
+  line-height: 36px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.text-scale p {
+  margin-top: 12px;
+  margin-bottom: 80px;
+  font-family: "Maison Neue Book";
 }
